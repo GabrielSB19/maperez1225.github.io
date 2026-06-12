@@ -8,14 +8,14 @@
       script-src 'self' 'unsafe-inline' https://ajax.googleapis.com;
       style-src 'self' 'unsafe-inline' https://ajax.googleapis.com;
       connect-src 'self' https://*.cbsivideo.com https://ajax.googleapis.com;
-      img-src 'self' data:;
+      img-src 'self' data: https://www.directvla.com;
       media-src 'self' blob:;
   ">
     <title>DSPORTS</title>
-    
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/shaka-player/5.1.8/controls.css">
 
     <link rel="icon" type="image/png" href="https://www.directvla.com/favicon.ico">
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/shaka-player/5.1.8/controls.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/5.1.8/shaka-player.ui.js"></script>
 
@@ -135,13 +135,15 @@
                     'mute',
                     'volume',
                     'spacer',
-                    'quality',
+                    'overflow_menu',
                     'fullscreen',
                 ],
-                'customContextMenu' : true, 
                 'contextMenuElements' : [
                     'statistics',
-                    'save_video_frame',
+                ],
+                'overflowMenuButtons' : [
+                    'quality',
+                    'statistics',
                 ],
                 'statisticsList' : [
                     'width',
